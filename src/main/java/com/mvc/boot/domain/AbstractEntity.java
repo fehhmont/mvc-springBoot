@@ -1,13 +1,17 @@
 package com.mvc.boot.domain;
 
-import java.io.Serial;
+
 import java.io.Serializable;
 
 import org.yaml.snakeyaml.events.Event.ID;
-import javax.persistence.*;
-;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 
+
+
+@SuppressWarnings({ "serial", "hiding" })
 public abstract class AbstractEntity<ID extends Serializable> implements Serializable {
     @Override
     public int hashCode() {
@@ -43,5 +47,10 @@ public abstract class AbstractEntity<ID extends Serializable> implements Seriali
 
     public void setId(ID id) {
         this.id = id;
+    }
+    
+    @Override
+    public String toString() {
+    	return "id = " + id;
     }
 }
