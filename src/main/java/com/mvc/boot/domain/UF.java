@@ -34,7 +34,7 @@ public enum UF {
     private String sigla;
     private String descricao;
     UF(String string, String string2) {
-        //TODO Auto-generated constructor stub
+    
     }
     public String getSigla() {
         return sigla;
