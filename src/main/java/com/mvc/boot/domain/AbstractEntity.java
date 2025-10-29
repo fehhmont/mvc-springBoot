@@ -3,15 +3,13 @@ package com.mvc.boot.domain;
 
 import java.io.Serializable;
 
-import org.yaml.snakeyaml.events.Event.ID;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-
-
-
+import jakarta.persistence.MappedSuperclass; // Adicionar este import
 
 @SuppressWarnings({ "serial", "hiding" })
+@MappedSuperclass // Adicionar esta anotação
 public abstract class AbstractEntity<ID extends Serializable> implements Serializable {
     @Override
     public int hashCode() {

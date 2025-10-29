@@ -4,10 +4,15 @@ import java.time.LocalDate;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
 
+@SuppressWarnings("serial")
+@Entity
+@Table(name = "FUNCIONARIOS")
 public class Funcionario extends AbstractEntity<Long> {
     
     @Column(nullable = false, unique = true)
